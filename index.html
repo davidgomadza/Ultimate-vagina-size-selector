@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vagina Fit Code Selector - For Women</title>
+<style>
+    :root {
+        --pink: #FF69B4;
+        --orange: #FF8C42;
+        --green: #2ECC71;
+        --light-brown: #D2B48C;
+        --light-brown-bg: #F5E6D3;
+        --white: #FFFFFF;
+        --text-dark: #2C2C2C;
+        --text-gray: #666666;
+        --border: #E5E5E5;
+        --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: linear-gradient(135deg, #FFF5F9 0%, #FFF 100%);
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, var(--pink) 0%, var(--orange) 100%);
+        color: var(--white);
+        border-radius: 20px;
+        margin-bottom: 30px;
+        box-shadow: var(--shadow);
+    }
+
+    header h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    header p {
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        opacity: 0.95;
+    }
+
+    .disclaimer {
+        background: #FFF3CD;
+        border-left: 4px solid var(--orange);
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+        color: #856404;
+    }
+
+    .section {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 30px;
+        margin-bottom: 25px;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+    }
+
+    .section:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-2px);
+    }
+
+    .section h2 {
+        color: var(--pink);
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .section-number {
+        background: var(--pink);
+        color: var(--white);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .section-desc {
+        color: var(--text-gray);
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+    }
+
+    .triangle-section {
+        background: var(--light-brown-bg);
+        border: 2px solid var(--light-brown);
+    }
+
+    .triangle-section h2 {
+        color: #8B6F47;
+    }
+
+    .triangle-section .section-number {
+        background: var(--light-brown);
+    }
+
+    .option-group {
+        display: grid;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .radio-card, .checkbox-card {
+        position: relative;
+        background: #F9F9F9;
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: start;
+        gap: 12px;
+    }
+
+    .radio-card:hover, .checkbox-card:hover {
+        border-color: var(--pink);
+        background: #FFF5F9;
+        transform: translateX(4px);
+    }
+
+    .radio-card.selected, .checkbox-card.selected {
+        border-color: var(--pink);
+        background: linear-gradient(135deg, #FFF5F9 0%, #FFE8F3 100%);
+        box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        border: 2px solid var(--border);
+        border-radius: 50%;
+        flex-shrink: 0;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.2s ease;
+        margin-top: 2px;
+    }
+
+    input[type="checkbox"] {
+        border-radius: 6px;
+    }
+
+    input[type="radio"]:checked, input[type="checkbox"]:checked {
+        border-color: var(--pink);
+        background: var(--pink);
+    }
+
+    input[type="radio"]:checked::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: var(--white);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    input[type="checkbox"]:checked::after {
+        content: '✓';
+        position: absolute;
+        color: var(--white);
+        font-size: 14px;
+        font-weight: bold;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .option-content {
+        flex: 1;
+    }
+
+    .option-title {
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .option-code {
+        font-family: 'Courier New', monospace;
+        font-size: 0.85rem;
+        color: var(--orange);
+        background: #FFF5E6;
+        padding: 2px 8px;
+        border-radius: 4px;
+    }
+
+    .option-desc {
+        font-size: 0.875rem;
+        color: var(--text-gray);
+    }
+
+    .toggle-switch {
+        position: relative;
+        width: 54px;
+        height: 28px;
+        flex-shrink: 0;
+    }
+
+    .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .toggle-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 28px;
+    }
+
+    .toggle-slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .toggle-slider {
+        background-color: var(--green);
+    }
+
+    input:checked + .toggle-slider:before {
+        transform: translateX(26px);
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        background: var(--orange);
+        color: var(--white);
+        border-radius: 50%;
+        font-size: 11px;
+        cursor: help;
+        font-weight: 700;
+    }
+
+    .tooltip:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--text-dark);
+        color: var(--white);
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        z-index: 1000;
+        font-weight: 400;
+    }
+
+    .btn {
+        background: linear-gradient(135deg, var(--orange) 0%, #FF7A2E 100%);
+        color: var(--white);
+        border: none;
+        padding: 14px 28px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 140, 66, 0.4);
+    }
+
+    .btn:active {
+        transform: translateY(0);
+    }
+
+    .btn-secondary {
+        background: linear-gradient(135deg, var(--pink) 0%, #FF4FA3 100%);
+        box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    }
+
+    .btn-secondary:hover {
+        box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .steps-container {
+        display: grid;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .step {
+        background: var(--white);
+        border-left: 4px solid var(--light-brown);
+        padding: 16px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .step:hover {
+        background: #FFFCFA;
+        transform: translateX(4px);
+    }
+
+    .step.active {
+        background: linear-gradient(135deg, var(--light-brown-bg) 0%, #FFFCFA 100%);
+        border-left-color: var(--pink);
+        box-shadow: 0 2px 12px rgba(210, 180, 140, 0.3);
+    }
+
+    .step-number {
+        display: inline-block;
+        background: var(--light-brown);
+        color: var(--white);
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 28px;
+        margin-right: 12px;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+
+    .step.active .step-number {
+        background: var(--pink);
+    }
+
+    .step-title {
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: var(--text-dark);
+    }
+
+    .step-desc {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        margin-left: 40px;
+    }
+
+    .summary-box {
+        background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%);
+        border: 2px solid var(--green);
+        border-radius: 12px;
+        padding: 24px;
+        margin-top: 20px;
+    }
+
+    .summary-box h3 {
+        color: var(--green);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(46, 204, 113, 0.2);
+    }
+
+    .summary-item:last-child {
+        border-bottom: none;
+    }
+
+    .summary-label {
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+
+    .summary-value {
+        color: var(--text-gray);
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+    }
+
+    .compatibility-note {
+        background: rgba(46, 204, 113, 0.1);
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 16px;
+        font-size: 0.9rem;
+        color: #1B5E20;
+    }
+
+    .toast {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--green);
+        color: var(--white);
+        padding: 16px 24px;
+        border-radius: 10px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        transform: translateY(200px);
+        opacity: 0;
+        transition: all 0.4s ease;
+        z-index: 10000;
+        font-weight: 600;
+    }
+
+    .toast.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .json-output {
+        background: #2C2C2C;
+        color: #50FA7B;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: 'Courier New', monospace;
+        font-size: 0.85rem;
+        overflow-x: auto;
+        margin-top: 16px;
+        display: none;
+    }
+
+    .json-output.show {
+        display: block;
+    }
+
+    .verbal-section {
+        background: linear-gradient(135deg, #FFF5F9 0%, #FFE8F3 100%);
+        border: 2px dashed var(--pink);
+    }
+
+    .verbal-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+        flex-wrap: wrap;
+    }
+
+    .verbal-btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: 2px solid var(--pink);
+        background: var(--white);
+        color: var(--pink);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .verbal-btn:hover {
+        background: var(--pink);
+        color: var(--white);
+        transform: scale(1.05);
+    }
+
+    .verbal-feedback {
+        margin-top: 16px;
+        padding: 12px;
+        background: var(--white);
+        border-radius: 8px;
+        font-style: italic;
+        color: var(--text-gray);
+        display: none;
+    }
+
+    .verbal-feedback.show {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 12px;
+        }
+        .section {
+            padding: 20px;
+        }
+        header {
+            padding: 30px 16px;
+        }
+        .btn-group {
+            flex-direction: column;
+        }
+        .btn {
+            width: 100%;
+        }
+        .toast {
+            right: 12px;
+            left: 12px;
+            bottom: 20px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vagina Fit Code Selector - For Women</h1>
+            <p>Configure optimal rim hold, grip, and activation sequences based on your preferences</p>
+        </header>
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> Educational reference only, based on the uploaded document "Detailed Analysis of the Ultimate Best Penis and Vagina Fit for Women". This tool is for informational purposes. Consult healthcare professionals for medical advice.
+        </div>
+
+        <!-- Section 1: Rim Hold Selection -->
+        <div class="section">
+            <h2><span class="section-number">1</span> Rim Hold Selection <span class="tooltip" data-tooltip="Page 7-8">?</span></h2>
+            <p class="section-desc">Select rim tightness: "tight enough to hold the penis firmly but not cause pain". This determines the initial entry grip and comfort.</p>
+            <div class="option-group" id="rimHoldOptions">
+                <label class="radio-card">
+                    <input type="radio" name="rimHold" value="389" data-name="Vagina Rim Hold 1">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Vagina Rim Hold 1
+                            <span class="option-code">389</span>
+                        </div>
+                        <div class="option-desc">Base rim hold level - moderate grip <span class="tooltip" data-tooltip="Page 7">?</span></div>
+                    </div>
+                </label>
+                <label class="radio-card">
+                    <input type="radio" name="rimHold" value="393" data-name="Vagina Rim Hold 5">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Vagina Rim Hold 5
+                            <span class="option-code">393</span>
+                        </div>
+                        <div class="option-desc">Enhanced hold - firmer grip without discomfort <span class="tooltip" data-tooltip="Page 7">?</span></div>
+                    </div>
+                </label>
+                <label class="radio-card">
+                    <input type="radio" name="rimHold" value="7298387543" data-name="Vagina Rim Tight">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Vagina Rim Tight
+                            <span class="option-code">7298387543</span>
+                        </div>
+                        <div class="option-desc">Tight rim configuration - strong initial contact <span class="tooltip" data-tooltip="Page 8">?</span></div>
+                    </div>
+                </label>
+                <label class="radio-card">
+                    <input type="radio" name="rimHold" value="7277185274" data-name="Vagina Rim Tight Tight">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Vagina Rim Tight Tight
+                            <span class="option-code">7277185274</span>
+                        </div>
+                        <div class="option-desc">Maximum rim tightness - most secure hold <span class="tooltip" data-tooltip="Page 8">?</span></div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Section 2: Internal Grip/Hold -->
+        <div class="section">
+            <h2><span class="section-number">2</span> Internal Grip/Hold <span class="tooltip" data-tooltip="Page 9-10">?</span></h2>
+            <p class="section-desc">Configure internal vaginal grip characteristics for during-intercourse sensation and control.</p>
+            <div class="option-group" id="gripOptions">
+                <label class="radio-card">
+                    <input type="radio" name="internalGrip" value="728518374" data-name="Vagina Tight Hold True">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Vagina Tight Hold True
+                            <span class="option-code">728518374</span>
+                        </div>
+                        <div class="option-desc">Authentic tight hold - natural firm grip <span class="tooltip" data-tooltip="Page 9">?</span></div>
+                    </div>
+                </label>
+                <label class="radio-card">
+                    <input type="radio" name="internalGrip" value="7298963841" data-name="Vagina Holding Cock">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Vagina Holding Cock
+                            <span class="option-code">7298963841</span>
+                        </div>
+                        <div class="option-desc">Active holding sensation - responsive grip <span class="tooltip" data-tooltip="Page 9">?</span></div>
+                    </div>
+                </label>
+                <label class="radio-card">
+                    <input type="radio" name="internalGrip" value="727718721" data-name="Vagina Tight Grip Wet">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Vagina Tight Grip Wet
+                            <span class="option-code">727718721</span>
+                        </div>
+                        <div class="option-desc">Tight grip with lubrication - snug but smooth <span class="tooltip" data-tooltip="Page 10">?</span></div>
+                    </div>
+                </label>
+                <label class="radio-card">
+                    <input type="radio" name="internalGrip" value="7277185284" data-name="Vagina Tight Grip Dry">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Vagina Tight Grip Dry
+                            <span class="option-code">7277185284</span>
+                        </div>
+                        <div class="option-desc">Tight grip without added moisture - maximum friction <span class="tooltip" data-tooltip="Page 10">?</span></div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Section 3: Comfort Adjustment -->
+        <div class="section">
+            <h2><span class="section-number">3</span> Comfort Adjustment <span class="tooltip" data-tooltip="Page 11">?</span></h2>
+            <p class="section-desc">Toggle loose codes to avoid discomfort. Use when needing to reduce intensity or prevent pain.</p>
+            <div class="option-group">
+                <label class="checkbox-card">
+                    <div class="option-content">
+                        <div class="option-title">Vagina Loose Loose Loose No Grip <span class="tooltip" data-tooltip="Page 11">?</span></div>
+                        <div class="option-desc">Code: <span class="option-code">721878562</span> - Reduces all grip for maximum comfort</div>
+                    </div>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="looseNoGrip" data-code="721878562">
+                        <span class="toggle-slider"></span>
+                    </div>
+                </label>
+                <label class="checkbox-card">
+                    <div class="option-content">
+                        <div class="option-title">Vagina Loose Loose Loose No Grip but Wet <span class="tooltip" data-tooltip="Page 11">?</span></div>
+                        <div class="option-desc">Code: <span class="option-code">728753867</span> - Loose with lubrication for ease</div>
+                    </div>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="looseWet" data-code="728753867">
+                        <span class="toggle-slider"></span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Section 4: Orgasmic Activation -->
+        <div class="section">
+            <h2><span class="section-number">4</span> Orgasmic Activation - Squanks <span class="tooltip" data-tooltip="Page 12-13">?</span></h2>
+            <p class="section-desc">Activate Squanks in order for progressive orgasmic response. Check desired levels and use the button to activate sequence.</p>
+            <div class="option-group" id="squankOptions">
+                <label class="checkbox-card">
+                    <input type="checkbox" name="squank" value="7286984832" data-order="1">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Squank 1
+                            <span class="option-code">7286984832</span>
+                        </div>
+                        <div class="option-desc">Initial activation level <span class="tooltip" data-tooltip="Page 12">?</span></div>
+                    </div>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="squank" value="7286984828" data-order="2">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Squank 2
+                            <span class="option-code">7286984828</span>
+                        </div>
+                        <div class="option-desc">Secondary activation level <span class="tooltip" data-tooltip="Page 12">?</span></div>
+                    </div>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="squank" value="789832108" data-order="10">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Squank 10
+                            <span class="option-code">789832108</span>
+                        </div>
+                        <div class="option-desc">Advanced activation level <span class="tooltip" data-tooltip="Page 13">?</span></div>
+                    </div>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="squank" value="7872384890" data-order="21">
+                    <div class="option-content">
+                        <div class="option-title">
+                            Squank 21
+                            <span class="option-code">7872384890</span>
+                        </div>
+                        <div class="option-desc">Maximum activation level <span class="tooltip" data-tooltip="Page 13">?</span></div>
+                    </div>
+                </label>
+            </div>
+            <div class="btn-group">
+                <button class="btn" id="activateSquanks">Activate Squanks in Order</button>
+            </div>
+            <div id="squankStatus" style="margin-top: 12px; font-size: 0.9rem; color: var(--green); font-weight: 600;"></div>
+        </div>
+
+        <!-- Section 5: Arousal Codes -->
+        <div class="section">
+            <h2><span class="section-number">5</span> Arousal Codes <span class="tooltip" data-tooltip="Page 14">?</span></h2>
+            <p class="section-desc">Toggle specific arousal mechanisms for enhanced sensation.</p>
+            <div class="option-group">
+                <label class="checkbox-card">
+                    <div class="option-content">
+                        <div class="option-title">Vagina Arousal <span class="tooltip" data-tooltip="Page 14">?</span></div>
+                        <div class="option-desc">Code: <span class="option-code">7298765421</span> - Internal vaginal arousal activation</div>
+                    </div>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="vaginaArousal" data-code="7298765421">
+                        <span class="toggle-slider"></span>
+                    </div>
+                </label>
+                <label class="checkbox-card">
+                    <div class="option-content">
+                        <div class="option-title">Clit Arousal <span class="tooltip" data-tooltip="Page 14">?</span></div>
+                        <div class="option-desc">Code: <span class="option-code">728598761</span> - Clitoral arousal activation</div>
+                    </div>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="clitArousal" data-code="728598761">
+                        <span class="toggle-slider"></span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Section 6: Triangle of Lust Guide -->
+        <div class="section triangle-section">
+            <h2><span class="section-number">6</span> Triangle of Lust Guide <span class="tooltip" data-tooltip="Page 15-16">?</span></h2>
+            <p class="section-desc">Interactive step-by-step visual guide. Click each step to mark completion and follow the sequence.</p>
+            <div class="steps-container" id="triangleSteps">
+                <div class="step" data-step="1">
+                    <span class="step-number">1</span>
+                    <div class="step-title">Positioning <span class="tooltip" data-tooltip="Page 15">?</span></div>
+                    <div class="step-desc">Partners face each other. Establish eye contact and comfortable physical proximity.</div>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <div class="step-title">Visualisation Steps <span class="tooltip" data-tooltip="Page 15">?</span></div>
+                    <div class="step-desc">Visualise the Triangle of Lust connection between partners - energy flow from eyes to heart to pelvis.</div>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <div class="step-title">Mouth Opening <span class="tooltip" data-tooltip="Page 16">?</span></div>
+                    <div class="step-desc">Slightly part lips, relaxed jaw. Breathe through mouth to heighten sensation and connection.</div>
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-number">4</span>
+                    <div class="step-title">Eye Actions <span class="tooltip" data-tooltip="Page 16">?</span></div>
+                    <div class="step-desc">Maintain intermittent deep eye contact. Look into left eye, then right eye, then lips in triangular pattern.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7: Verbal Interaction -->
+        <div class="section verbal-section">
+            <h2><span class="section-number">7</span> Verbal Interaction <span class="tooltip" data-tooltip="Page 16">?</span></h2>
+            <p class="section-desc">The "I can / no I can" section that "makes the vagina perform harder" according to the document.</p>
+            <div class="verbal-buttons">
+                <button class="verbal-btn" data-phrase="i-can">"I can"</button>
+                <button class="verbal-btn" data-phrase="no-i-can">"No, I can"</button>
+            </div>
+            <div class="verbal-feedback" id="verbalFeedback"></div>
+        </div>
+
+        <!-- Section 8: Best Fit Summary -->
+        <div class="section">
+            <h2><span class="section-number">8</span> Best Fit Summary</h2>
+            <p class="section-desc">Review your selected configuration and compatibility analysis.</p>
+            <div class="summary-box" id="summaryBox">
+                <h3>✓ Current Configuration</h3>
+                <div id="summaryContent">
+                    <p style="color: var(--text-gray); font-style: italic;">Make selections above to see your configuration summary...</p>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" id="exportBtn">Export Configuration (JSON)</button>
+                <button class="btn" id="resetBtn">Reset All</button>
+            </div>
+            <div class="json-output" id="jsonOutput"></div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // State management
+        const state = {
+            rimHold: null,
+            internalGrip: null,
+            comfort: {
+                looseNoGrip: false,
+                looseWet: false
+            },
+            squanks: [],
+            arousal: {
+                vagina: false,
+                clit: false
+            },
+            triangleProgress: [],
+            verbalLastUsed: null
+        };
+
+        // Utility functions
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        function updateSummary() {
+            const summaryContent = document.getElementById('summaryContent');
+            let html = '';
+
+            if (state.rimHold) {
+                html += `<div class="summary-item">
+                    <span class="summary-label">Rim Hold</span>
+                    <span class="summary-value">${state.rimHold.name} (${state.rimHold.code})</span>
+                </div>`;
+            }
+
+            if (state.internalGrip) {
+                html += `<div class="summary-item">
+                    <span class="summary-label">Internal Grip</span>
+                    <span class="summary-value">${state.internalGrip.name} (${state.internalGrip.code})</span>
+                </div>`;
+            }
+
+            const comforts = [];
+            if (state.comfort.looseNoGrip) comforts.push('Loose No Grip (721878562)');
+            if (state.comfort.looseWet) comforts.push('Loose Wet (728753867)');
+            if (comforts.length) {
+                html += `<div class="summary-item">
+                    <span class="summary-label">Comfort Mode</span>
+                    <span class="summary-value">${comforts.join(', ')}</span>
+                </div>`;
+            }
+
+            if (state.squanks.length) {
+                html += `<div class="summary-item">
+                    <span class="summary-label">Active Squanks</span>
+                    <span class="summary-value">${state.squanks.map(s => `Squank ${s.order}`).join(', ')}</span>
+                </div>`;
+            }
+
+            const arousals = [];
+            if (state.arousal.vagina) arousals.push('Vagina (7298765421)');
+            if (state.arousal.clit) arousals.push('Clit (728598761)');
+            if (arousals.length) {
+                html += `<div class="summary-item">
+                    <span class="summary-label">Arousal Active</span>
+                    <span class="summary-value">${arousals.join(', ')}</span>
+                </div>`;
+            }
+
+            if (state.triangleProgress.length) {
+                html += `<div class="summary-item">
+                    <span class="summary-label">Triangle Steps</span>
+                    <span class="summary-value">${state.triangleProgress.length}/4 completed</span>
+                </div>`;
+            }
+
+            if (html) {
+                html += `<div class="compatibility-note">
+                    <strong>Compatibility Note:</strong> Firm but comfortable fit that matches the vagina's rim and hold sizes. Configuration provides snug, pleasurable grip without pain. <span class="tooltip" data-tooltip="Page 17-18">?</span>
+                </div>`;
+                summaryContent.innerHTML = html;
+            } else {
+                summaryContent.innerHTML = '<p style="color: var(--text-gray); font-style: italic;">Make selections above to see your configuration summary...</p>';
+            }
+        }
+
+        // Event Listeners - Rim Hold
+        document.querySelectorAll('input[name="rimHold"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                document.querySelectorAll('#rimHoldOptions .radio-card').forEach(card => {
+                    card.classList.remove('selected');
+                });
+                e.target.closest('.radio-card').classList.add('selected');
+                state.rimHold = {
+                    code: e.target.value,
+                    name: e.target.dataset.name
+                };
+                updateSummary();
+            });
+        });
+
+        // Event Listeners - Internal Grip
+        document.querySelectorAll('input[name="internalGrip"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                document.querySelectorAll('#gripOptions .radio-card').forEach(card => {
+                    card.classList.remove('selected');
+                });
+                e.target.closest('.radio-card').classList.add('selected');
+                state.internalGrip = {
+                    code: e.target.value,
+                    name: e.target.dataset.name
+                };
+                updateSummary();
+            });
+        });
+
+        // Event Listeners - Comfort Adjustment
+        document.getElementById('looseNoGrip').addEventListener('change', (e) => {
+            state.comfort.looseNoGrip = e.target.checked;
+            e.target.closest('.checkbox-card').classList.toggle('selected', e.target.checked);
+            updateSummary();
+        });
+
+        document.getElementById('looseWet').addEventListener('change', (e) => {
+            state.comfort.looseWet = e.target.checked;
+            e.target.closest('.checkbox-card').classList.toggle('selected', e.target.checked);
+            updateSummary();
+        });
+
+        // Event Listeners - Squanks
+        document.querySelectorAll('input[name="squank"]').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+                e.target.closest('.checkbox-card').classList.toggle('selected', e.target.checked);
+            });
+        });
+
+        document.getElementById('activateSquanks').addEventListener('click', () => {
+            const selectedSquanks = Array.from(document.querySelectorAll('input[name="squank"]:checked'))
+                .map(cb => ({
+                    order: parseInt(cb.dataset.order),
+                    code: cb.value
+                }))
+                .sort((a, b) => a.order - b.order);
+            
+            state.squanks = selectedSquanks;
+            
+            if (selectedSquanks.length === 0) {
+                document.getElementById('squankStatus').textContent = '⚠️ No Squanks selected. Check boxes above first.';
+                document.getElementById('squankStatus').style.color = 'var(--orange)';
+            } else {
+                document.getElementById('squankStatus').textContent = `✓ Activated in order: ${selectedSquanks.map(s => `Squank ${s.order}`).join(' → ')}`;
+                document.getElementById('squankStatus').style.color = 'var(--green)';
+                showToast('Squanks activated in sequence!');
+            }
+            updateSummary();
+        });
+
+        // Event Listeners - Arousal
+        document.getElementById('vaginaArousal').addEventListener('change', (e) => {
+            state.arousal.vagina = e.target.checked;
+            e.target.closest('.checkbox-card').classList.toggle('selected', e.target.checked);
+            updateSummary();
+        });
+
+        document.getElementById('clitArousal').addEventListener('change', (e) => {
+            state.arousal.clit = e.target.checked;
+            e.target.closest('.checkbox-card').classList.toggle('selected', e.target.checked);
+            updateSummary();
+        });
+
+        // Event Listeners - Triangle Steps
+        document.querySelectorAll('.step').forEach(step => {
+            step.addEventListener('click', () => {
+                const stepNum = parseInt(step.dataset.step);
+                step.classList.toggle('active');
+                
+                if (step.classList.contains('active')) {
+                    if (!state.triangleProgress.includes(stepNum)) {
+                        state.triangleProgress.push(stepNum);
+                    }
+                } else {
+                    state.triangleProgress = state.triangleProgress.filter(s => s !== stepNum);
+                }
+                updateSummary();
+            });
+        });
+
+        // Event Listeners - Verbal Interaction
+        document.querySelectorAll('.verbal-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const phrase = btn.dataset.phrase;
+                state.verbalLastUsed = phrase;
+                const feedback = document.getElementById('verbalFeedback');
+                
+                if (phrase === 'i-can') {
+                    feedback.textContent = '"I can" - Confidence assertion activated. According to doc page 16, this makes the vagina perform harder through positive reinforcement.';
+                } else {
+                    feedback.textContent = '"No, I can" - Defiant confidence activated. Creates tension/release dynamic that enhances grip response per page 16.';
+                }
+                feedback.classList.add('show');
+                showToast('Verbal code activated');
+            });
+        });
+
+        // Export functionality
+        document.getElementById('exportBtn').addEventListener('click', () => {
+            const config = {
+                timestamp: new Date().toISOString(),
+                document_reference: "Detailed Analysis of the Ultimate Best Penis and Vagina Fit for Women",
+                configuration: {
+                    rim_hold: state.rimHold,
+                    internal_grip: state.internalGrip,
+                    comfort_adjustment: state.comfort,
+                    squanks_active: state.squanks,
+                    arousal_codes: state.arousal,
+                    triangle_of_lust_progress: `${state.triangleProgress.length}/4 steps`,
+                    verbal_interaction: state.verbalLastUsed
+                },
+                compatibility_note: "firm but comfortable fit that matches the vagina's rim and hold sizes... snug, pleasurable grip without pain"
+            };
+
+            const jsonStr = JSON.stringify(config, null, 2);
+            const jsonOutput = document.getElementById('jsonOutput');
+            jsonOutput.textContent = jsonStr;
+            jsonOutput.classList.add('show');
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(jsonStr).then(() => {
+                showToast('Configuration copied to clipboard!');
+            }).catch(() => {
+                showToast('Configuration ready - see output below');
+            });
+        });
+
+        // Reset functionality
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            if (confirm('Reset all selections?')) {
+                // Reset state
+                state.rimHold = null;
+                state.internalGrip = null;
+                state.comfort = { looseNoGrip: false, looseWet: false };
+                state.squanks = [];
+                state.arousal = { vagina: false, clit: false };
+                state.triangleProgress = [];
+                state.verbalLastUsed = null;
+
+                // Reset UI
+                document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
+                    input.checked = false;
+                });
+                document.querySelectorAll('.radio-card, .checkbox-card, .step').forEach(el => {
+                    el.classList.remove('selected', 'active');
+                });
+                document.getElementById('squankStatus').textContent = '';
+                document.getElementById('verbalFeedback').classList.remove('show');
+                document.getElementById('jsonOutput').classList.remove('show');
+                
+                updateSummary();
+                showToast('All selections reset');
+            }
+        });
+
+        // Initialize
+        updateSummary();
+    </script>
+</body>
+</html>
